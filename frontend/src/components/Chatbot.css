@@ -1,0 +1,121 @@
+/* Chatbot Container */
+.chatbot-container {
+  max-height: 85vh;                 /* 🔴 slightly reduced */
+  overflow-y: auto;
+  width: 600px;
+  padding: 22px;                    /* 🔴 reduced padding */
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin: 30px auto;                /* 🔴 reduced margin */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Markdown formatting (react-markdown) */
+.markdown p {
+  margin: 4px 0;                    /* 🔴 tighter paragraphs */
+}
+
+.markdown ol {
+  padding-left: 18px;
+  margin: 4px 0;                    /* 🔴 tighter list spacing */
+}
+
+.markdown li {
+  margin-bottom: 3px;               /* 🔴 compact list items */
+  line-height: 1.45;
+}
+
+/* Headings / bold labels */
+.markdown strong {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Title */
+.chatbot-title {
+  font-size: 24px;                  /* 🔴 reduced */
+  color: #333;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+/* Input Box */
+.chatbot-input {
+  width: 100%;
+  min-height: 90px;                 /* 🔴 reduced height */
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;                  /* 🔴 reduced */
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+}
+
+.chatbot-input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Button */
+.chatbot-button {
+  width: 100%;
+  padding: 12px;                    /* 🔴 reduced */
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;                  /* 🔴 reduced */
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.chatbot-button:hover {
+  background: linear-gradient(135deg, #45a049, #2e7d32);
+}
+
+.chatbot-button.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Response Box */
+.chatbot-response {
+  margin-top: 14px;                 /* 🔴 reduced */
+  padding: 12px;                    /* 🔴 reduced */
+  background-color: #f0f4f8;
+  color: #333;
+  border-radius: 10px;
+  font-size: 15px;                  /* 🔴 reduced */
+  border: 1px solid #ddd;
+  line-height: 1.45;                /* 🔴 compact */
+  white-space: pre-wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .chatbot-container {
+    width: 92%;
+    padding: 18px;
+  }
+
+  .chatbot-title {
+    font-size: 22px;
+  }
+
+  .chatbot-input {
+    font-size: 15px;
+  }
+
+  .chatbot-button {
+    font-size: 15px;
+    padding: 11px;
+  }
+}

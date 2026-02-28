@@ -282,13 +282,15 @@ const path = require("path");
 // Serve React build
 app.use(express.static(path.join(__dirname, "build")));
 
+// React routing (SPA)
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-// Dynamic port for Render
+// Dynamic port
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+

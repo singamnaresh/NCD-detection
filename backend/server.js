@@ -257,8 +257,8 @@ Guidelines:
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "https://ncd-front.onrender.com",
-          "X-Title": "Nutrition Analysis Chatbot"
+           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
+          "Content-Type": "application/json"
         }
       }
     );

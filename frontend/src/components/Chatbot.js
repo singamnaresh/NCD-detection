@@ -49,7 +49,7 @@ const Chatbot = () => {
     setResponse("");
 
     try {
-      const res = await axios.post("http://localhost:5000/chatbot", {
+      const res = await axios.post("https://ncd-back1.onrender.com/chatbot", {
         message,
       });
 

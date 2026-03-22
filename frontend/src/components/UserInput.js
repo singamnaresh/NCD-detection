@@ -152,7 +152,7 @@ const UserInput = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("http://localhost:5000/categories")
+        axios.get("https://ncd-back1.onrender.com/categories")
             .then(response => setCategories(response.data))
             .catch(error => console.error("❌ Error fetching categories:", error));
     }, []);
@@ -160,7 +160,7 @@ const UserInput = () => {
     useEffect(() => {
         if (selectedCategory) {
             const encodedCategory = encodeURIComponent(selectedCategory);
-            axios.get(`http://localhost:5000/foods?category=${encodedCategory}`)
+            axios.get(`https://ncd-back1.onrender.com/foods?category=${encodedCategory}`)
                 .then(response => setFoods(response.data))
                 .catch(error => console.error("❌ Error fetching foods:", error));
         } else {

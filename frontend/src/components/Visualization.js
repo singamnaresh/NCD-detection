@@ -487,7 +487,7 @@ const Visualization = () => {
         }
 
         axios
-            .post("http://localhost:5000/calculate-intake", { items }) // Modified to send item list
+            .post("https://ncd-back1.onrender.com/calculate-intake", { items }) // Modified to send item list
             .then((response) => {
                 console.log("🔍 API Response:", response.data);
                 setData(response.data);
